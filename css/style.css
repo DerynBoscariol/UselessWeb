@@ -44,9 +44,29 @@ img {
 }
 
 #gem1 path {
-    fill:red;
+    fill:#da0202;
 }
 
 #gem2 path {
-    fill:rgb(0, 200, 255);
+    fill:#0105f5;
+}
+
+#gem3 path {
+    fill:#7a03b6;
+}
+
+#gem4 path {
+    fill:#108d52;
+}
+
+#gem5 path {
+    fill:#ff6404;
+}
+
+#gem6 path {
+    fill:#ff8ae0;
+}
+
+#gem7 path {
+    fill:#7ff7f5;
 }
