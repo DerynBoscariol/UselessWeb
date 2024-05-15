@@ -42,3 +42,11 @@ img {
     top:0;
     left:0;
 }
+
+#gem1 path {
+    fill:red;
+}
+
+#gem2 path {
+    fill:rgb(0, 200, 255);
+}

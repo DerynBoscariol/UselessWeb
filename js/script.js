@@ -16,5 +16,9 @@ window.onload = function (){
         console.log(randomX,randomY);
     }
     placeGem();
+
+    function randomColour(){
+
+    }
 }}
 
