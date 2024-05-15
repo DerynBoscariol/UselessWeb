@@ -1,19 +1,20 @@
 window.onload = function (){
-    var gem = document.getElementById("gem1");
+    var gems = document.getElementsByClassName("gem");
 
+    for (let i = 0; i < gems.length; i++){
     function randomNumber(min, max) {
         return Math.floor(Math.random() * (max - min)) + min;
       }
     
     function placeGem (){
-        var genRandomX = randomNumber(0, 1200);
-        var genRandomY = randomNumber(0, 1200);
+        var genRandomX = randomNumber(0, 1300);
+        var genRandomY = randomNumber(0, 750);
         var randomX = genRandomX.toString() + "px";
         var randomY = genRandomY.toString() + "px";
-        gem.style.left = randomX;
-        gem.style.top = randomY;
+        gems[i].style.left = randomX;
+        gems[i].style.top = randomY;
         console.log(randomX,randomY);
     }
     placeGem();
-}
+}}
 
