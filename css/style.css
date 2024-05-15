@@ -36,9 +36,9 @@ img {
 #search-area {
     position: absolute;
 }
+
 .gem {
-    position: relative;
+    position: absolute;
     top:0;
     left:0;
-
 }
