@@ -1,0 +1,19 @@
+
+body {
+    background-color: #383e67;
+    color: #ffe572;
+}
+header {
+    display: flex;
+    flex-flow: row;
+    gap: 30px;
+}
+
+img {
+    height: auto;
+    width: 200px;
+}
+
+#darkness {
+    display: none;
+}
