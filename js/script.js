@@ -1,16 +1,26 @@
 
 var gem = document.getElementById("gem1");
 
+
 window.onload = function (){
 
-function placeGem (){
-var randomX = (Math.random() * (1200 - 0)) +"px";
-var randomY = (Math.random() * (800 - 0)) +"px";
-gem.style.left = randomX;
-gem.style.top = randomY;
-console.log(randomX);
-console.log(randomY);
-}
+
+    function randomNumber(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+      }
+
+    function placeGem (){
+        var genRandomX = randomNumber(0, 1200);
+        var genRandomY = randomNumber(0, 1200);
+        var randomX = genRandomX.toString() + "px";
+        var randomY = genRandomY.toString() + "px";
+        gem.style.left = randomX;
+        gem.style.top = randomY;
+        console.log(randomX);
+        console.log(randomY);
+        console.log(genRandomX);
+        console.log(genRandomY);
+    }
 
 placeGem();
 }

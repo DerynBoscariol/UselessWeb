@@ -32,7 +32,13 @@ img {
     width: 100%;
     height: 100%;
 }
-.gem {
+
+#search-area {
     position: absolute;
+}
+.gem {
+    position: relative;
+    top:0;
+    left:0;
 
 }
