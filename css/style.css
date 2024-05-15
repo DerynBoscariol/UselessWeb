@@ -15,7 +15,13 @@ img {
 }
 
 #darkness {
+    display: none;
+    position: absolute;
     width: 100%;
-    height: 100%;
-    fill: black;
+    height: 800px;
+    background-color: black;
+}
+
+.gem {
+    position: absolute;
 }
