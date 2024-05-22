@@ -6,7 +6,7 @@ window.onload = function (){
         return Math.floor(Math.random() * (max - min)) + min;
       }
     
-    function placeGem (){
+    function placeGems (){
         var genRandomX = randomNumber(0, 1300);
         var genRandomY = randomNumber(0, 700);
         var randomX = genRandomX.toString() + "px";
@@ -15,10 +15,7 @@ window.onload = function (){
         gems[i].style.top = randomY;
         console.log(randomX,randomY);
     }
-    placeGem();
+    placeGems();
 
-    function randomColour(){
-
-    }
 }}
 

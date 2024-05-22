@@ -37,10 +37,16 @@ img {
     position: absolute;
 }
 
+#rocks {
+    z-index: 2;
+    position: absolute;
+}
+
 .gem {
     position: absolute;
     top:0;
     left:0;
+    z-index: 1;
 }
 
 #gem1 path {
