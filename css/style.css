@@ -11,7 +11,11 @@ header {
 
 img {
     height: auto;
-    width: 200px;
+    width: 190px;
+}
+
+#refreshBtn {
+    align-self:center;
 }
 
 #darkness {
@@ -40,6 +44,11 @@ img {
 #rocks {
     z-index: 2;
     position: absolute;
+}
+
+#small-rocks {
+    width: 1400px;
+    height: 800px;
 }
 
 .gem {
