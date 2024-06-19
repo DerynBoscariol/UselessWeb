@@ -1,8 +1,9 @@
 window.onload = function () {
-  var refreshBtn = document.getElementById("refreshBtn");
-  var getGems = document.getElementsByClassName("gem");
-  var gems = Array.from(getGems);
-  var searchArea = document.getElementById("search-area");
+  const refreshBtn = document.getElementById("refreshBtn");
+  const getGems = document.getElementsByClassName("gem");
+  const gems = Array.from(getGems);
+  const searchArea = document.getElementById("search-area");
+  const gemCount = document.getElementById("gemCount");
 
   console.log(gems.length);
   console.log(gems);
@@ -15,12 +16,12 @@ window.onload = function () {
     // Clear existing gems
     searchArea.innerHTML = '';
     // Creating a random set of two numbers per gem
-    for (var i = 0; i < gems.length; i++) {
-      var gem = gems[i];
+    for (let i = 0; i < gems.length; i++) {
+      let gem = gems[i];
       gem.style.position = "absolute";
       // Using said number to place gems at random x and y positions within the view window
-      let genRandomX = randomNumber(0, 1300);
-      let genRandomY = randomNumber(0, 700);
+      let genRandomX = randomNumber(0, window.innerWidth - 200);
+      let genRandomY = randomNumber(0, window.innerHeight - 330);
       let randomX = genRandomX.toString() + "px";
       let randomY = genRandomY.toString() + "px";
       gem.style.left = randomX;
@@ -31,21 +32,22 @@ window.onload = function () {
       // Adding an event listener to each gem so it will duplicate when clicked
       gem.addEventListener("click", duplicateGem);
       searchArea.appendChild(gem);
+      gemCount.innerHTML = gems.length;
     }
   }
 
   function duplicateGem(event) {
     console.log("gem clicked");
-    var gemClicked = event.target;
-    var newGem = gemClicked.cloneNode(true);
+    let gemClicked = event.target;
+    let newGem = gemClicked.cloneNode(true);
   
     // Append the new gem to the parent element
     searchArea.appendChild(newGem);
     
     // Position the new gem randomly
     newGem.style.position = "absolute";
-    let genRandomX = randomNumber(0, 1300);
-    let genRandomY = randomNumber(0, 700);
+    let genRandomX = randomNumber(0, window.innerWidth - 200);
+    let genRandomY = randomNumber(0, window.innerHeight - 330);
     newGem.style.left = genRandomX + "px";
     newGem.style.top = genRandomY + "px";
     newGem.style.zIndex = 2;
@@ -58,6 +60,8 @@ window.onload = function () {
   
     // Optionally, add a class for styling purposes
     newGem.classList.add("new");
+
+    gemCount.innerHTML = gems.length;
   
     console.log("Total gems after duplication:", gems.length);
     console.log("Newly created gem:", newGem);
