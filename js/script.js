@@ -30,9 +30,9 @@ window.onload = function () {
       console.log(randomX, randomY);
       console.log(gem);
 
-      // Adding an event listener to each gem so it will duplicate when clicked
+      //Adding an event listener to each gem so it will duplicate when clicked
       gem.addEventListener("click", duplicateGem);
-      //appending gem to searchArea parent element
+      //Appending gem to searchArea parent element
       searchArea.appendChild(gem);
       //Updating gem count
       gemCount.innerHTML = gems.length;
@@ -45,10 +45,10 @@ window.onload = function () {
     //newGem is a clone of gemClicked
     let newGem = gemClicked.cloneNode(true);
   
-    // Append the new gem to the parent element
+    //Append the new gem to the parent element
     searchArea.appendChild(newGem);
     
-    // Position the new gem randomly
+    //Position the new gem randomly
     newGem.style.position = "absolute";
     let genRandomX = randomNumber(0, window.innerWidth - 200);
     let genRandomY = randomNumber(0, window.innerHeight - 330);
@@ -56,16 +56,16 @@ window.onload = function () {
     newGem.style.top = genRandomY + "px";
     newGem.style.zIndex = 2;
   
-    // Adding the new gem to the gems array
+    //Adding the new gem to the gems array
     gems.push(newGem);
   
     //Adding click event listener to the new gem for future duplication
     newGem.addEventListener("click", duplicateGem);
   
-    //adding class .new to all new gemms
+    //Adding class .new to all new gemms
     newGem.classList.add("new");
 
-    //updateing gem count
+    //Updating gem count
     gemCount.innerHTML = gems.length;
   
     console.log("Total gems after duplication:", gems.length);
@@ -75,7 +75,7 @@ window.onload = function () {
   //Calling function to place gems
   placeGems();
 
-  // Recalling function to place gems if refresh button is clicked
+  //Recalling function to place gems if refresh button is clicked
   if (refreshBtn) {
     refreshBtn.addEventListener("click", placeGems);
   }
