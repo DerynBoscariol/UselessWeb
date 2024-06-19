@@ -13,8 +13,9 @@ window.onload = function () {
   }
 
   function placeGems() {
-    // Clear existing gems
+    // Clear previously added gems
     searchArea.innerHTML = '';
+    gems.splice(7, gems.length - 7);
     // Creating a random set of two numbers per gem
     for (let i = 0; i < gems.length; i++) {
       let gem = gems[i];
