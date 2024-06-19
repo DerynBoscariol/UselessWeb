@@ -1,4 +1,5 @@
 
+
 body {
     background-color: #383e67;
     color: #ffe572;
@@ -18,14 +19,6 @@ img {
     align-self:center;
 }
 
-#darkness {
-    display: none;
-    position: absolute;
-    width: 1400px;
-    height: 800px;
-    background-color: black;
-}
-
 #cave {
     width: 1400px;
     height: 800px;
@@ -35,6 +28,7 @@ img {
     position: absolute;
     width: 1400px;
     height: 800px;
+    z-index: 0;
 }
 
 #search-area {
@@ -42,13 +36,15 @@ img {
 }
 
 #rocks {
-    z-index: 2;
+    z-index: 5;
     position: absolute;
 }
 
 #small-rocks {
     width: 1400px;
     height: 800px;
+    z-index: 5;
+    position: absolute;
 }
 
 .gem {
@@ -56,32 +52,39 @@ img {
     top:0;
     left:0;
     z-index: 1;
+    width: 80px;
+    height: auto;
 }
 
-#gem1 path {
-    fill:#da0202;
+#gem1 {
+    filter: brightness(60%) saturate(100%) sepia(100%) hue-rotate(175deg) brightness(202%) contrast(100%);
 }
 
-#gem2 path {
-    fill:#0105f5;
+#gem2 {
+    filter: sepia(100%) saturate(10000%) hue-rotate(1deg) brightness(90%) contrast(90%) saturate(5);
 }
 
-#gem3 path {
+#gem3 {
     fill:#7a03b6;
+    filter: brightness(90%) invert(19%) sepia(100%) saturate(6107%) hue-rotate(227deg) brightness(100%) contrast(100%)
 }
 
-#gem4 path {
+#gem4 {
     fill:#108d52;
+    filter: sepia(100%) saturate(10000%) hue-rotate(60deg) brightness(50%) contrast(90%);
 }
 
-#gem5 path {
+#gem5 {
     fill:#ffc02b;
+    filter: brightness(90%) invert(19%) sepia(100%) saturate(6207%) hue-rotate(358deg) brightness(108%) contrast(115%)
 }
 
-#gem6 path {
+#gem6 {
     fill:#ff8ae0;
+    filter: sepia(100%) saturate(10000%) hue-rotate(269deg) brightness(100%) contrast(170%);
 }
 
-#gem7 path {
+#gem7 {
     fill:#7ff7f5;
+    filter: sepia(100%) saturate(10000%) hue-rotate(90deg) brightness(100%) contrast(100%);
 }
